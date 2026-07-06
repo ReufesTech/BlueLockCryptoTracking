@@ -1,0 +1,14 @@
+# BlueLock Crypto Tracking V1.4 - Python Dependencies
+# Install: python -m pip install -r requirements.txt
+
+# Web framework
+fastapi==0.115.6
+
+# ASGI server - plain (no [standard]) avoids watchfiles/Rust dependency on Windows
+uvicorn==0.32.1
+
+# HTTP client for CoinGecko API
+httpx==0.28.1
+
+# Data validation
+pydantic==2.10.4

@@ -5,9 +5,6 @@ Crypto Tracking. Nothing here is a commitment or a timeline — it's a list of
 directions the project could go, roughly ordered by how well they fit the
 current local-first, no-accounts architecture.
 
-Have an idea that's not listed? Open a
-[feature request](.github/ISSUE_TEMPLATE/feature_request.md).
-
 ---
 
 ## Under consideration for v1.5

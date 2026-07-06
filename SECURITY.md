@@ -22,9 +22,6 @@ BlueLock Crypto Tracking is a **local-only, self-hosted** application. It:
 
 If you discover a security vulnerability, please report it responsibly:
 
-**Email:** security@bluelocksystems.com  
-**Subject line:** `[BlueLock Security] Brief description`
-
 Include:
 - A description of the vulnerability
 - Steps to reproduce it

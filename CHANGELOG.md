@@ -4,8 +4,7 @@ All notable changes to BlueLock Crypto Tracking are documented here.
 
 ---
 
-## [1.4] — update 3 of 3 (unreleased)
-
+## [1.4] — update 3 of 3 
 ### Fixed
 - **`config.py`'s `SERVER_PORT`/`SERVER_HOST` now actually control the server** — previously they were log-line decoration only; the real bind address was hardcoded as `--host 127.0.0.1 --port 8765` in `run.sh`/`run.bat`'s `uvicorn` command, so editing config.py silently did nothing. Added a `if __name__ == "__main__"` entry point to `main.py` that calls `uvicorn.run(app, host=config.SERVER_HOST, port=config.SERVER_PORT)`, and switched both launch scripts to run `python main.py` instead of invoking `uvicorn` directly with hardcoded flags. `run.sh`/`run.bat` now read the host/port from `config.py` themselves too, so the port-in-use check, the server bind, and the auto-opened browser URL can't drift out of sync with each other again.
   - Verified live: ran the server via `python main.py` on the default port, then again after changing `SERVER_PORT` to `8877` in `config.py` - confirmed the server bound to `8877`, `8765` was correctly unbound, and reverted the change afterward.
@@ -37,7 +36,7 @@ Cross-checked docs against actual repo contents and fixed several genuine mismat
 
 ---
 
-## [1.4] — update 2 of 3 (unreleased)
+## [1.4] — update 2 of 3
 
 ### Added
 - **Watchlist Snapshot** on the Dashboard — mirrors the existing Favorites/Portfolio Snapshot panels, showing symbol, live price, and note (truncated) for every watched coin without needing to open the Watchlist tab. Refreshes on the same cycle as the rest of the dashboard.
